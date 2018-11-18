@@ -1,0 +1,7 @@
+[project]
+  ignore = .git
+
+[cxx]
+  ccflags = -std=c11
+  should_remap_host_platform = true
+  untracked_headers = error
