@@ -1,6 +1,9 @@
 [project]
   ignore = .git
 
+[parser]
+  default_build_file_syntax = SKYLARK
+
 [cxx]
   ccflags = -std=c11
   should_remap_host_platform = true

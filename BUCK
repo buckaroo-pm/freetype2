@@ -1,14 +1,17 @@
-macos_sources = glob([
-])
+load('//:subdir_glob.bzl', 'subdir_glob')
+load('//:buckaroo_macros.bzl', 'buckaroo_deps')
 
-linux_sources = glob([
-])
+macos_srcs = [
+]
 
-windows_sources = glob([
+linux_srcs = [
+]
+
+windows_srcs = glob([
   'src/winfonts/**/*.c',
 ])
 
-platform_sources = macos_sources + windows_sources
+platform_srcs = macos_srcs + windows_srcs
 
 cxx_library(
   name = 'freetype',
@@ -23,7 +26,7 @@ cxx_library(
   srcs = glob([
     'src/**/*.c',
   ],
-  excludes = glob([
+  exclude = glob([
     'src/**/test_*.c', 
   ]) + [
     'src/autofit/aflatin2.c',
@@ -31,15 +34,16 @@ cxx_library(
     'src/base/fterrors.c', 
     'src/gxvalid/gxvfgen.c', 
     'src/gxvalid/gxfgen.c', 
-  ] + platform_sources),
+  ] + platform_srcs),
   platform_srcs = [
-    ('macos.*', macos_sources),
-    ('linux.*', linux_sources),
-    ('windows.*', windows_sources),
+    ('macos.*', macos_srcs),
+    ('linux.*', linux_srcs),
+    ('windows.*', windows_srcs),
   ],
   preprocessor_flags = [
     '-DFT2_BUILD_LIBRARY',
   ],
+  deps = buckaroo_deps(),
   visibility = [
     'PUBLIC',
   ],
