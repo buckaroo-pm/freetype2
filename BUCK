@@ -7,9 +7,8 @@ macos_srcs = [
 linux_srcs = [
 ]
 
-windows_srcs = glob([
-  'src/winfonts/**/*.c',
-])
+windows_srcs = [
+]
 
 platform_srcs = macos_srcs + windows_srcs
 
