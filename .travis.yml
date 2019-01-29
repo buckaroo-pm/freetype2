@@ -35,4 +35,4 @@ before_install:
 script:
   - ./buckaroo-client install
   - buck build -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //:freetype
-  - buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //example
+  - buck build -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //example
