@@ -5,5 +5,5 @@ package = "github.com/buckaroo-pm/madler-zlib"
 target = "//:zlib"
 
 [lock."github.com/buckaroo-pm/madler-zlib"]
-versions = [ "branch=master" ]
-revision = "1f7335c126705550b9cd4e91d2d34835c49bc28e"
+versions = [ "1.0.1" ]
+revision = "58ef5ba6591f866cf24cb18a18c301daa9f5bb11"
