@@ -2,4 +2,4 @@ targets = [ "//:freetype" ]
 
 [[dependency]]
 package = "github.com/buckaroo-pm/madler-zlib"
-version = "*"
+version = "branch=master"
