@@ -1,9 +1,9 @@
-manifest = "b829f30afc0a47b758f051d4f3d7be17f9435d32170288788887b769e926ec7b"
+manifest = "4ce26c521442e7ff405078c1b4b8f046dccb2db9478afcc3a0f826264f2c68ed"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/madler-zlib"
 target = "//:zlib"
 
 [lock."github.com/buckaroo-pm/madler-zlib"]
-versions = [ "branch=master" ]
-revision = "76044bba206818f3378c346396f4a33de338d71c"
+versions = [ "1.0.1" ]
+revision = "58ef5ba6591f866cf24cb18a18c301daa9f5bb11"
